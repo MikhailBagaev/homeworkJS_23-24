@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TO-DO LIST</title>
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">    
+    <link rel="stylesheet" href="css/style.css">
+    <script data-main="app/app" src="app/require.js"></script>
+  </head>
+  <body>      
+      <script type="text/template" id="wrapper-template">
+          <div class="wrapper">
+              <div class="content">
+                  <div class="controlls">
+                      <input type="text" class="item-value" placeholder="Сделал дело - гуляй смело">
+                      <button class="item-add">
+                      Добавить пункт
+                      </button>
+                  </div>
+                  <h1>Список дел</h1>
+                  <ol class="item-list"></ol>
+              </div>
+          </div>
+      </script>
+      <script type="text/template" id="list-template">
+          <% for (var i = 0; i <   data.length; i++) { %>
+              <li>                 
+                  <span data-b="<%= data[i] %>" class="display-item" title="Сlick to edit">  
+                  <%= data[i]            
+                      %>             
+                  </span>            
+                  <span data-value="<%= data[i] %>" class="item-delete" title="Сlick to delete">
+                  удалить
+                  </span>
+              </li>
+          <div class="clear"></div>
+          <% }; %>
+      </script>            
+  </body>
+</html>
